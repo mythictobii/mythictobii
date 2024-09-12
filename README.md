@@ -1,5 +1,5 @@
 - 👋 Hi, I’m @mythictobii
-- 👀 I’m interested in Coding , Anime 
+- 👀 I’m interested in Coding , Anime , Music
 - 🌱 I’m currently learning
 - 📫 My Instagram is @mythic.tobi
 - 😄 Pronouns: He/him
