@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/6edcf2c516.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="logic.js"></script>
+    <title>GUI</title>
+    <style>
+
+body{
+    padding: 0%;
+    margin: 0%;
+}
+.nav-bar{
+    background-color: black;
+}
+
+.logo img{
+    width:20vh;
+    height:6vh;
+}
+.trvl{
+   
+    text-align: center;
+    border-left:solid 2px white;
+}
+
+.nav-link {
+    padding: 15px;
+    color: white;
+    
+}
+.nav-items{
+    height:50px;
+    width:550px;
+    margin-left:500px;
+    border-right: solid rgba(255, 255, 255, 0.46) 2px;
+}
+.icn{
+    
+    font-size:larger;
+    color: white;
+    text-align: center;
+}
+.atc .btn{
+    color: white;
+   border-radius: 0%;
+   background-color: rgba(255, 255, 255, 0.095);
+   transition: transform 0.3s ease, background-color 0.4s ease, color 0.0s;
+}
+.atc .btn:hover{
+   
+    background-color: white;
+    border: white solid 1px;
+    color: black;
+}
+.ucn{
+    margin-left:100px;
+    font-size:larger;
+    color: white;
+    text-align: center;
+}
+.signs{
+    font-size:72px;
+    padding-top:200px;
+    z-index: 2;
+    position: relative;
+}
+.body{
+    text-align: center;
+    width:100%;
+    height: 110vh;
+    background-size: cover;
+    background-image:url(https://plus.unsplash.com/premium_photo-1676654935937-109c7936b8ff?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YWVzdGhldGljJTIwZGVza3RvcCUyMHdhbGxwYXBlcnxlbnwwfHwwfHx8MA%3D%3D) ;
+    position: relative;
+    display: inline-block; 
+    padding: 20px;
+    background-color: #fff; 
+    color: #333;
+    border-radius: 10px; 
+    overflow: hidden; 
+    border-radius: none;
+}
+.body::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1; 
+    transition: opacity 0.3s ease;
+}
+.mhe h1{
+    font-size:72px;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+.leg{
+    margin-left: 500px;
+    position: relative;
+    z-index: 2;
+}
+.bld i{
+    font-size: larger;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.bld i:hover{
+   transform: translateY(-10px);
+}
+.leg p{
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.leg p:hover{
+    transform: scale(1.1);
+    font-weight: bold;
+}
+
+/* Basic styling for the dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    z-index: 4;
+    width: 50vh;
+    height:7vh;
+    
+
+
+}
+
+/* Style the dropdown button */
+.dropdown-button {
+    text-align: left;
+    background-color: #ffffff;
+    color: rgba(0, 0, 0, 0.663);
+    padding: 10px 20px;
+    border: none;
+    height: 7vh;
+    width: 100% ;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    z-index: 4;
+}
+
+
+
+/* Hide the dropdown content by default */
+.dropdown-content {
+    text-align: left;
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    width: 50vh;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 5;
+    border-radius: 4px;
+}
+
+/* Style the links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+    z-index: 4;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    z-index: 4;
+}
+
+/* Optionally add an arrow indicator */
+.dropdown::after {
+    content: '\25BC'; /* Unicode character for a downward arrow */
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    z-index: 4;
+}
+/* Show dropdown content when the class "show" is added */
+.dropdown-content.show {
+    display: block;
+    z-index: 4;
+}
+.srchbtn{
+    z-index: 2;
+}
+.srchbtn .ben{
+    margin-top:20px;
+    padding: 2vh;
+    background-color:#078169;
+    position: relative;
+    z-index: 2;
+    border: none;
+    border-radius: none;
+    width:30vh;
+    transition:  transform 0.3s ease, background-color 0.3s ease;
+}
+.srchbtn .ben:hover{
+    background-color:#1a1a1a;
+    
+    border-radius: none;
+}
+.blu{
+    height:150vh;
+    background-color: white;
+}
+.fet{
+    margin-top:100px;
+    padding-bottom:50px;
+    margin-right:550px;
+}
+.fet h1{
+    text-align: center;
+    font-weight:300;
+    font-size:60px;
+   
+}
+.rent{
+    height:656px;
+    width:416px;
+
+}
+.rimgb{
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height:656px;
+}
+.rimg{
+    max-width: 100%;
+    height:656px;
+    background-image: url(https://eiddo.qodeinteractive.com/wp-content/uploads/2018/02/H1-prop-feat-img-1.jpg);
+    background-size: cover;
+    
+}
+.bdtext{
+    padding-top:20px;
+    transition: transform 0.3s ease, color 0.3s ease; 
+}
+
+.rent{
+    color: black;
+    transition: none;
+}
+.rent:hover .bdtext{
+  transform: translate(40px, 0px); 
+  color: white;
+
+}
+.rimgb:hover{
+
+    box-shadow:  30px 140px 0 rgb(0, 0, 0);
+} 
+.rent-lord{
+    margin-left:350px;
+}
+.badge{
+    margin-top:0px;
+    padding-top:0px;
+    margin-left:304px;
+}
+.lnch{
+    background-color: #F6F3F3;
+    height:568px;
+}
+.fx{
+    margin-left:500px;
+    margin-top:100px;
+    padding-bottom:20vh;
+}
+.fx h2{
+    font-weight: 300;
+    font-stretch: expanded;
+}
+.lnchimg{
+    margin-left: 110px;
+    height: 568px;
+    width:50%;
+    background-image: url(https://fokkner.qodeinteractive.com/wp-content/uploads/2021/05/blog-img-3.jpg);
+}
+.pxp{
+    padding-left:340px;
+    margin-right:0;
+    margin:100px;
+    width:1230px;
+    height:50vh;
+}
+
+   
+.pfp img{
+    border-radius:50%;
+    height:5vh;
+  
+}
+.exp h1{
+    font-weight: 400;
+
+}
+.texp{
+    margin-top:100px;
+    margin-left:500px ;
+}
+
+    </style>
+ 
+</head>
+<body>
+      <div class="nav-bar container-fluid d-flex p-2">
+        <div class="logo ps-4 pt-3 pe-5"><img src="https://eiddo.qodeinteractive.com/wp-content/uploads/2018/04/Logo-1-green.png" alt=""></div>
+        <div class="nav-item p-4 d-flex">
+        <div class="trvl pt-2">
+         <p class="text-light fw-bold ps-4 pt-2" >Unique place to stay</p>
+        </div>
+        <div class="pt-1">
+        <div class="nav-items d-flex ">
+        <a href="#" class="nav-link">HOME</a>
+        <a href="" class="nav-link">PAGES</a>
+        <a href="" class="nav-link">LISTINGS</a>
+        <a href="" class="nav-link">BLOG</a>
+        <a href="" class="nav-link">SHOP</a>
+        <a href="" class="nav-link">ELEMENTS</a>
+    </div>
+    </div>
+    <div class="icn pt-3 ms-5">
+        <i class="fa-solid fa-cart-shopping fa-beat"></i>
+    </div>
+    <div class="atc">
+        <button class="btn ms-5  w-100 h-100 fw-bold">Add Listing <span><i class="fa-solid fa-plus fw-bold"></i></span></button>
+    </div>
+    <div class="ucn pt-3">
+        <i class="fa-regular fa-user"></i>
+    </div>
+    </div>
+      </div>
+     <div class="body" style="border-radius: none;">
+        <h1 class="signs text-center"><img src="https://eiddo.qodeinteractive.com/wp-content/uploads/2018/02/H1-signature-2.png" alt=""></h1>
+     <div class="mhe">
+        <h1 class="fw-normal">All you need is one click.</h1>
+     </div>
+     <div class="leg d-flex mt-5 fw-bold ps-5">
+        <div class="appartments text-center text-light">
+            <p><span class="bld pe-2"><i class="fa-solid fa-city"></i></span>  Appartments</p>
+        </div>
+        <div class="appartments text-center text-light ps-5">
+            <p  style="border-left:solid 3px white; padding-left:50px;"><span class="bld pe-2"><i class="fa-solid fa-user-group"></i></span>  Condominium</p>
+        </div>
+        <div class="appartments text-center text-light ps-5">
+            <p  style="border-left:solid 3px white; padding-left:50px;"><span class="bld pe-2"><i class="fa-solid fa-house"></i></span>  House</p>
+        </div>
+        <div class="appartments text-center text-light ps-5">
+            <p  style="border-left:solid 3px white; padding-left:50px;"><span class="bld pe-2"><i class="fa-solid fa-print"></i></span>  Office</p>
+        </div>
+        
+</div>
+<div class="dropdown ms-2">
+    <button class="dropdown-button">All Locations</button>
+    <div class="dropdown-content">
+        <a href="#" data-value="option1">All Locations</a>
+        <a href="#" data-value="option1">Option 1</a>
+        <a href="#" data-value="option2">Option 2</a>
+        <a href="#" data-value="option3">Option 3</a>
+    </div>
+</div>
+<div class="dropdown ps-2 ms-2">
+    <button class="dropdown-button">All Statuses</button>
+    <div class="dropdown-content">
+        <a href="#" data-value="option1">All Statuses</a>
+        <a href="#" data-value="option1">Option 1</a>
+        <a href="#" data-value="option2">Option 2</a>
+        <a href="#" data-value="option3">Option 3</a>
+    </div>
+</div>
+   <div class="srchbtn">
+    <button class="ben text-light fw-bold">Search Places</button>
+   </div>
+     </div>
+     <div class="blu w-100" style="height: 100vh;">
+        <div class="ends">
+        <div class="fet">
+      <h1 class="">Check out our featured items</h1>
+    </div>
+    <div class="d-flex">
+
+
+      <div class="rent-lord">
+      <div class="rent">
+        <div class="rimgb">
+       <div class="rimg ps-4">
+        <div class="badge"><p class="bg-success p-3">For Rent</p></div>
+       </div>
+    </div>
+       <div class="bdtext" >
+        <h4>HZ33 22 Park Ave</h4>
+        <h6>New York – US</h6>
+        <p>$2.500</p>
+       </div>
+      </div>
+    </div>
+    
+    
+    <div class="rent-lord" style="margin-left:50px;">
+        <div class="rent">
+          <div class="rimgb">
+         <div class="rimg ps-4">
+          <div class="badge"><p class="bg-success p-3">For Rent</p></div>
+         </div>
+      </div>
+         <div class="bdtext" >
+          <h4>HZ33 22 Park Ave</h4>
+          <h6>New York – US</h6>
+          <p>$2.500</p>
+         </div>
+        </div>
+      </div>
+      
+      <div class="rent-lord" style="margin-left:50px;">
+        <div class="rent">
+          <div class="rimgb">
+         <div class="rimg ps-4">
+          <div class="badge"><p class="bg-success p-3">For Rent</p></div>
+         </div>
+      </div>
+         <div class="bdtext" >
+          <h4>HZ33 22 Park Ave</h4>
+          <h6>New York – US</h6>
+          <p>$2.500</p>
+         </div>
+        </div>
+      </div>
+  
+
+
+</div>
+
+
+
+</div>
+</div>
+
+
+   <div class="lnch">
+    <div class="d-flex">
+        <div class="fx">
+            <h2 class="fw-normal mb-5">Newly-launched campaign <br>in Whitby agencies </h2>
+            <p><i class="fa-solid fa-minus text-secondary pe-2"></i>Ut aliquam purus sit amet luctus</p>
+            <p><i class="fa-solid fa-minus text-secondary pe-2"></i>Ut aliquam purus sit amet luctus</p>
+            <p><i class="fa-solid fa-minus text-secondary pe-2"></i>Ut aliquam purus sit amet luctus</p>
+            <p><i class="fa-solid fa-minus text-secondary pe-2"></i>Ut aliquam purus sit amet luctus</p>
+            <h1 class="ms-4 mt-4"><img src="https://eiddo.qodeinteractive.com/wp-content/uploads/2018/02/H1-signature-1.png" alt=""></h1>
+        </div>
+        <div class="lnchimg"></div>
+    </div>
+   </div>
+   <div class="exp">
+    <div class="texp">
+    <p class="secondary">
+        SEARCH PLACES
+    </p>
+    <h1>People's Experiences</h1>
+</div>
+     <div class="pxp d-flex">
+        <div class="pfp">
+            <div class="cnt d-flex">
+            <img src="https://eiddo.qodeinteractive.com/wp-content/uploads/2018/02/H1-testimonial-img-1.png" alt="">
+           
+           <div class="txt ps-4">
+           <h3>Allison Holmes</h3>
+           <p>Designer</p>
+        </div>
+    </div>
+          <div class="des">
+            Lectus proin nibh nisl condimentum id venenatis a condimentum vitae. Scelerisque iverra mauris in aliquam sem fringilla. Ut eu sem integer vitae justo eget.Habitasse platea dictumst vestibulum rhoncus.
+          </div>
+        </div>
+    
+     </div>
+    
+  
+
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+       
+
+        
+   
+</body>
+</html>
